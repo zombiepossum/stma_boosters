@@ -14,3 +14,9 @@ for player in players:
     content = template.render(player)
     with open('./varsity-roster-cards.html', mode="a", encoding="utf-8") as message:
         message.write(content)
+
+for player in players:
+  if player['team'] == 'Junior Varsity':
+    content = template.render(player)
+    with open('./junior-varsity-roster-cards.html', mode="a", encoding="utf-8") as message:
+        message.write(content)
